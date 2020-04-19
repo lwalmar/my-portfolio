@@ -1,0 +1,10 @@
+.iconWrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.svgIcon {
+    display: inline-block;
+    fill: currentColor;
+    max-height: 100%
+}
