@@ -1,0 +1,9 @@
+.buttonCircle {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor:pointer;
+    box-shadow: 5px 5px 5px -1px rgba(0,0,0,0.4);
+}
