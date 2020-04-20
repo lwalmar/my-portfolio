@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import './style.css';
 
-const ButtonSquare = ({children}) => (
-  <div className="buttonSquare">
+const ButtonSquare = ({
+  width,
+  children
+}) => (
+  <div
+    className="buttonSquare"
+    width={width}
+    length={width}
+  >
     {children}
   </div>
 );
