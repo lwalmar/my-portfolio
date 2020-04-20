@@ -19,39 +19,41 @@ const Header = ({
 }) => {
   console.log('GLYPHS', GLYPHS)
   return (
-  <div>
-    <div className="header_settings">
-      <ButtonSquare >
-        <Icon
-          glyph={GLYPHS.INFO}
-          height={25}
-          width={25}
-        />
-      </ButtonSquare>
-      <ButtonSquare>
-        <Icon
-          glyph={GLYPHS.PORTFOLIO}
-          height={25}
-          width={25}
-        />
-      </ButtonSquare>
-    </div>
-    <div className="header_info">
-      <div className="headerInfo_total">{"937 584,00 ₽"}</div>
-      <div className="headerInfo_inDetail">
-        <div className="headerInfo_yieldInPercent">{"17,14 %"}</div>
-        <div className="headerInfo_yieldInCcy">{"27370,71 ₽"}</div>
-        <div className="headerInfo_time">
-          {"24 часа"}
-          <span className="headerInfoTime_icon">
-            <ButtonCircle>
-              <Icon
-                glyph={GLYPHS.CALENDAR1}
-                height={25}
-                width={25}
-              />
-            </ButtonCircle>
-          </span>
+  <div className="header">
+    <div className="header_wrapper">
+      <div className="header_settings">
+        <ButtonSquare >
+          <Icon
+            glyph={GLYPHS.INFO}
+            height={30}
+            width={30}
+          />
+        </ButtonSquare>
+        <ButtonSquare>
+          <Icon
+            glyph={GLYPHS.PORTFOLIO}
+            height={30}
+            width={30}
+          />
+        </ButtonSquare>
+      </div>
+      <div className="header_info">
+        <div className="headerInfo_total">{"937 584,00 ₽"}</div>
+        <div className="headerInfo_inDetail">
+          <div className="headerInfo_yieldInPercent">{"17,14 %"}</div>
+          <div className="headerInfo_yieldInCcy">{"27370,71 ₽"}</div>
+          <div className="headerInfo_time">
+            {"24 часа"}
+            <span className="headerInfoTime_icon">
+              <ButtonCircle>
+                <Icon
+                  glyph={GLYPHS.CALENDAR1}
+                  height={25}
+                  width={25}
+                />
+              </ButtonCircle>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -59,12 +61,15 @@ const Header = ({
       <div className="header_viewList">
         <div className="header_viewList_content">
           {viewAvailable.map((view) => (
-            <div className={classNames(
-              'header_viewItem',
-              {'active': view === viewActive}
-            )}>
+            <div
+              className={classNames(
+                'header_viewItem',
+                {'active': view === viewActive}
+                )}
+              onClick={() => onChangeView(view)}
+            >
               {VIEW_LABEL[view]}
-            </div>))};
+            </div>))}
         </div>
       </div>
     </div>
