@@ -1,8 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
+import CostContainer from './components/CostContainer';
+import LoadingSpinner from './components/Common/LoadingSpinner';
 
-const loadData = () => new Promise((resolve, error) => setTimeout(() => resolve(['isin1', 'isin2', 'isin3']), 1000))
+const loadData = () => new Promise((resolve, error) => setTimeout(() => resolve(['isin1', 'isin2', 'isin3', 'isin1', 'isin2', 'isin3', 'isin1', 'isin2', 'isin3']), 500))
 
 const VIEW_AVAILABLE = [
   'cost',
@@ -25,11 +27,12 @@ function App() {
     fetchData();
   }, ['']);
 
-  console.log('isins', isins)
   return (
     <div className="myPortfolio">
       {isLoading ? (
-        <div>Loading ...</div>
+        <div className="myPortfolio_loading">
+          <LoadingSpinner />
+        </div>
       ) : (
         <Fragment>
           <Header
@@ -37,6 +40,8 @@ function App() {
             viewAvailable={VIEW_AVAILABLE}
             onChangeView={(view) => setView(view)}
           />
+          {
+            view === 'cost' && <CostContainer isins={isins} />}
         </Fragment>
       )}
     </div>

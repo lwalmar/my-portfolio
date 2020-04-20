@@ -1,4 +1,14 @@
+html, body, div[id='root'] {
+    height: 100%;
+}
+
 .myPortfolio {
-    width: 90%;
-    margin: 50px auto 0;
+    height: 100%;
+}
+
+.myPortfolio_loading {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
