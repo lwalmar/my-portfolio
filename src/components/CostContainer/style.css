@@ -1,0 +1,36 @@
+.costContainer {
+    padding-top: 200px;
+}
+
+.costContainerItem {
+    padding: 20px 0;
+}
+
+.costContainerItem_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.costContainerItem + .costContainerItem {
+    border-top: 1px solid #ccc;
+}
+
+.costContainerItem_info {
+    margin: auto;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.costContainerItemInfo_title,
+.costContainerItemInfo_values
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.costContainerItemInfo_values {
+    color: #ccc;
+    font-size: 14px;
+}
