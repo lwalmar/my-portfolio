@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.01734bad.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.eb5e6937.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.eb5e6937.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.f13b90e6.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.f13b90e6.js.map",
+    "static/js/2.116eb21a.chunk.js": "/my-portfolio/static/js/2.116eb21a.chunk.js",
+    "static/js/2.116eb21a.chunk.js.map": "/my-portfolio/static/js/2.116eb21a.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "precache-manifest.8ef82c3e53b2c36bb829f9b0e548a1be.js": "/my-portfolio/precache-manifest.8ef82c3e53b2c36bb829f9b0e548a1be.js",
+    "service-worker.js": "/my-portfolio/service-worker.js",
+    "static/css/main.01734bad.chunk.css.map": "/my-portfolio/static/css/main.01734bad.chunk.css.map",
+    "static/js/2.116eb21a.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.116eb21a.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.svg": "/my-portfolio/static/media/arrow-down.562e58f2.svg",
+    "static/media/arrow-up.svg": "/my-portfolio/static/media/arrow-up.632f305d.svg",
+    "static/media/calendar-picker--cross.svg": "/my-portfolio/static/media/calendar-picker--cross.d88a56dc.svg",
+    "static/media/discussion.svg": "/my-portfolio/static/media/discussion.41204492.svg",
+    "static/media/edit.svg": "/my-portfolio/static/media/edit.ba020940.svg",
+    "static/media/gear.svg": "/my-portfolio/static/media/gear.ceb2a391.svg",
+    "static/media/info.svg": "/my-portfolio/static/media/info.9921c1cd.svg",
+    "static/media/market.svg": "/my-portfolio/static/media/market.48cc9e17.svg",
+    "static/media/portfolio.svg": "/my-portfolio/static/media/portfolio.511396e7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f13b90e6.js",
+    "static/js/2.116eb21a.chunk.js",
+    "static/css/main.01734bad.chunk.css",
+    "static/js/main.eb5e6937.chunk.js"
+  ]
+}
