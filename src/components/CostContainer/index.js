@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ButtonSquare from '../Common/ButtonSquare';
 import ButtonCircle from '../Common/ButtonCircle';
-import Icon, {GLYPHS} from '../Common/Icon';
 import './style.css';
 import classNames from 'classnames';
 

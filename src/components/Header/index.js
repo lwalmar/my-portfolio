@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import ButtonSquare from '../Common/ButtonSquare';
 import ButtonCircle from '../Common/ButtonCircle';
-import Icon, {GLYPHS} from '../Common/Icon';
+import { ReactComponent as MenuIcon } from '../../icons/menu.svg';
+import { ReactComponent as BellIcon } from '../../icons/bxs-bell.svg';
+import { ReactComponent as Calendar } from '../../icons/calendar-outlined.svg';
 import './style.css';
 import classNames from 'classnames';
 
@@ -17,24 +19,15 @@ const Header = ({
   viewAvailable,
   onChangeView
 }) => {
-  console.log('GLYPHS', GLYPHS)
   return (
   <div className="header">
     <div className="header_wrapper">
       <div className="header_settings">
         <ButtonSquare >
-          <Icon
-            glyph={GLYPHS.INFO}
-            height={30}
-            width={30}
-          />
+          <MenuIcon />
         </ButtonSquare>
         <ButtonSquare>
-          <Icon
-            glyph={GLYPHS.PORTFOLIO}
-            height={30}
-            width={30}
-          />
+          <BellIcon />
         </ButtonSquare>
       </div>
       <div className="header_info">
@@ -46,11 +39,7 @@ const Header = ({
             {"24 часа"}
             <span className="headerInfoTime_icon">
               <ButtonCircle>
-                <Icon
-                  glyph={GLYPHS.CALENDAR1}
-                  height={25}
-                  width={25}
-                />
+                <Calendar />
               </ButtonCircle>
             </span>
           </div>

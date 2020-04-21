@@ -1,5 +1,5 @@
 .costContainer {
-    padding-top: 200px;
+    padding-top: 240px;
 }
 
 .costContainerItem {
@@ -13,7 +13,7 @@
 }
 
 .costContainerItem + .costContainerItem {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgb(132, 158, 182);
 }
 
 .costContainerItem_info {
@@ -31,6 +31,6 @@
 }
 
 .costContainerItemInfo_values {
-    color: #ccc;
+    color: rgb(132, 158, 182);
     font-size: 14px;
 }
