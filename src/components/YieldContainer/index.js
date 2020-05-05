@@ -43,6 +43,7 @@ const YieldContainer = ({
           {bondsDataList.map((bondData) => (
             <div
               className='costContainerItem'
+              key={bondData.isin}
               onClick={() => setSelectedIsin(bondData.isin)}
             >
               <div className='costContainerItem_wrapper'>
@@ -66,7 +67,7 @@ const YieldContainer = ({
                   </div>
                 </div>
               </div>
-            </div>))};
+            </div>))}
             <Modal open={Boolean(selectedIsin)} onClose={() => setSelectedIsin(null)} center>
               <InstrumentInfo
                 data={bondsDataMap[selectedIsin]}

@@ -15,9 +15,13 @@ const CostInstrumentInfo = ({
   <Fragment>
     <div className='instrumentInfo_header'>
       <div className='instrumentInfo_logo'>
-        <ButtonCircle
-          diameter={'45px'}
-        />
+        <ButtonCircle diameter={'45px'}>
+          {data.img &&
+            <div className='costContainerItemLogo_wrapper'>
+              <img src={require(`../../icons/logos/${data.img}.png`)} alt="Smiley face"/>
+            </div>
+          }
+        </ButtonCircle>
       </div>
       <div className='instrumentInfo_info'>
         <div className='instrumentInfo_title'>

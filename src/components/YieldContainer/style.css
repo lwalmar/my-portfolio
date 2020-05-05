@@ -1,6 +1,6 @@
 .costContainer {
-    padding-top: 246px;
-    height: calc(100% - 246px);
+    padding-top: 243px;
+    height: calc(100% - 243px);
 }
 
 .costContainerItem {
@@ -59,7 +59,7 @@
 
 
 .costContainerItem:hover {
-    background-color: rgba(132, 158, 182, 0.1);
+    background-color: rgb(247, 249, 251);
     cursor: pointer;
 }
 
