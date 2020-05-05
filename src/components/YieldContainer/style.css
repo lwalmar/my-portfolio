@@ -1,0 +1,74 @@
+.costContainer {
+    padding-top: 246px;
+    height: calc(100% - 246px);
+}
+
+.costContainerItem {
+    padding: 20px 0;
+}
+
+.costContainerItem_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.costContainerItem + .costContainerItem {
+    border-top: 1px solid #ebebeb;
+}
+
+.costContainerItem_info {
+    margin: auto;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.costContainerItemInfo_title,
+.costContainerItemInfo_values
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.costContainerItemInfo_values div {
+    width: 100px;
+}
+
+.costContainerItemInfo_values div:last-child {
+    text-align: right;
+}
+
+
+.costContainerItemInfo_values {
+    color: rgb(132, 158, 182);
+    font-size: 14px;
+}
+
+.costContainerItem_increase,
+.costContainerItem_decrease {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.costContainerItem_decrease {
+    transform: scale(1, -1);
+    transform-origin: center center;
+}
+
+
+.costContainerItem:hover {
+    background-color: rgba(132, 158, 182, 0.1);
+    cursor: pointer;
+}
+
+.costContainerItemLogo_wrapper {
+    display: flex;
+    vertical-align: baseline;
+    align-items: center;
+    text-align: center;
+}
+.costContainerItemLogo_wrapper img {
+    width: 100%;
+}

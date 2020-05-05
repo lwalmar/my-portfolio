@@ -11,6 +11,7 @@ export const bondsDataMap = {
     maturityDate: '02.02.2022',
     rating: 'AAA',
     yield: 10.8,
+    coupon: '9.26',
     yieldChange: 0.04},
   'isin2': {
     isin: 'isin2',
@@ -24,6 +25,7 @@ export const bondsDataMap = {
     maturityDate: '12.03.2024',
     yield: 4.8,
     rating: 'AAA',
+    coupon: '3.66',
     yieldChange: -0.4},
   'isin3': {
     isin: 'isin3',
@@ -37,6 +39,7 @@ export const bondsDataMap = {
     maturityDate: '02.02.2022',
     yield: 5.56,
     rating: 'AAA',
+    coupon: '2.74',
     yieldChange: 2.42},
   'isin4': {
     isin: 'isin4',
@@ -50,6 +53,7 @@ export const bondsDataMap = {
     maturityDate: '12.02.2020',
     yield: 4.8,
     rating: 'BBB',
+    coupon: '1.04',
     yieldChange: -3.24},
   'isin5': {
     isin: 'isin5',
@@ -62,6 +66,7 @@ export const bondsDataMap = {
     ccy: 'RUB',
     maturityDate: '07.12.2024',
     yield: 6.5,
+    coupon: '2.04',
     yieldChange: 0.62},
   'isin6': {
     isin: 'isin6',
@@ -72,6 +77,7 @@ export const bondsDataMap = {
     currentInvestmentsChangeInPercent: 2.01,
     currentInvestment: 185011.00,
     ccy: 'RUB',
+    coupon: '0.54',
     maturityDate: '04.06.2021',
     yield: 10.8,
     yieldChange: 0.04}

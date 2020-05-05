@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import CostContainer from './components/CostContainer';
 import LoadingSpinner from './components/Common/LoadingSpinner';
+import YieldContainer from './components/YieldContainer';
 
 const loadData = () => new Promise((resolve, error) => setTimeout(() => resolve(['isin1', 'isin2', 'isin3', 'isin4', 'isin5', 'isin6']), 500))
 
@@ -41,7 +42,7 @@ function App() {
             onChangeView={(view) => setView(view)}
           />
           {view === 'cost' && <CostContainer isins={isins} />}
-          {view === 'yield' && <CostContainer isins={isins} />}
+          {view === 'yield' && <YieldContainer isins={isins} />}
           {view === 'rating' && <CostContainer isins={isins} />}
           {view === 'payments' && <CostContainer isins={isins} />}
         </Fragment>
