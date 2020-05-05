@@ -33,35 +33,35 @@ const YieldContainer = ({
   }, [isins]);
 
   return (
-    <div className="costContainer">
+    <div className="yieldContainer">
       {isLoading ? (
         <div className="myPortfolio_loading">
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="costContainer_wrapper">
+        <div className="yieldContainer_wrapper">
           {bondsDataList.map((bondData) => (
             <div
-              className='costContainerItem'
+              className='yieldContainerItem'
               key={bondData.isin}
               onClick={() => setSelectedIsin(bondData.isin)}
             >
-              <div className='costContainerItem_wrapper'>
-                <div className='costContainerItem_logo'>
+              <div className='yieldContainerItem_wrapper'>
+                <div className='yieldContainerItem_logo'>
                   <ButtonCircle diameter={'45px'}>
                     {bondData.img &&
-                      <div className='costContainerItemLogo_wrapper'>
+                      <div className='yieldContainerItemLogo_wrapper'>
                         <img src={require(`../../icons/logos/${bondData.img}.png`)} alt="Smiley face"/>
                       </div>
                     }
                   </ButtonCircle>
                 </div>
-                <div className='costContainerItem_info'>
-                  <div className='costContainerItemInfo_title'>
+                <div className='yieldContainerItem_info'>
+                  <div className='yieldContainerItemInfo_title'>
                     <div>{bondData.standardName}</div>
                     <div>${bondData.yield}</div>
                   </div>
-                  <div className='costContainerItemInfo_values'>
+                  <div className='yieldContainerItemInfo_values'>
                     <div>{`${bondData.quantity} шт.`}</div>
                     <div>{`К погашению ${bondData.maturityDate}`}</div>
                   </div>

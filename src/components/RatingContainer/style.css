@@ -42,8 +42,12 @@
     width: 100%;
 }
 
-.ratingContainerItemInfo_values div {
-    width: 100px;
+.ratingContainerItemInfoTitle_ci {
+    white-space: nowrap;
+}
+
+.ratingContainerItemInfo_values div:first-child {
+    max-width: 100px;
 }
 
 .ratingContainerItemInfo_values div:last-child {

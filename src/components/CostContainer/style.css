@@ -31,8 +31,12 @@
     width: 100%;
 }
 
-.costContainerItemInfo_values div {
-    width: 100px;
+.costContainerItemInfo_values div:first-child {
+    max-width: 100px;
+}
+
+.costContainerItemInfoTitle_ci {
+    white-space: nowrap;
 }
 
 .costContainerItemInfo_values div:last-child {

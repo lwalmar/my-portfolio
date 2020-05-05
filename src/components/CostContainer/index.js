@@ -59,7 +59,7 @@ const CostContainer = ({
                 <div className='costContainerItem_info'>
                   <div className='costContainerItemInfo_title'>
                     <div>{bondData.standardName}</div>
-                    <div>{`${bondData.currentInvestment} ${bondData.ccy}`}</div>
+                    <div className='costContainerItemInfoTitle_ci'>{`${bondData.currentInvestment} ${bondData.ccy}`}</div>
                   </div>
                   <div className='costContainerItemInfo_values'>
                     <div>{`${bondData.quantity} шт.`}</div>
