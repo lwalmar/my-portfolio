@@ -47,9 +47,13 @@ const CostContainer = ({
             >
               <div className='costContainerItem_wrapper'>
                 <div className='costContainerItem_logo'>
-                  <ButtonCircle
-                    diameter={'45px'}
-                  />
+                  <ButtonCircle diameter={'45px'}>
+                    {bondData.img &&
+                      <div className='costContainerItemLogo_wrapper'>
+                        <img src={require(`../../icons/logos/${bondData.img}.png`)} alt="Smiley face"/>
+                      </div>
+                    }
+                  </ButtonCircle>
                 </div>
                 <div className='costContainerItem_info'>
                   <div className='costContainerItemInfo_title'>

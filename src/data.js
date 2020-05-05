@@ -1,6 +1,7 @@
 export const bondsDataMap = {
   'isin1': {
     isin: 'isin1',
+    img: 'alfabank',
     standardName: 'Альфа банк',
     quantity: 2000,
     price: 104.14,
@@ -13,6 +14,7 @@ export const bondsDataMap = {
     yieldChange: 0.04},
   'isin2': {
     isin: 'isin2',
+    img: 'tinkoff',
     standardName: 'Тинькофф банк',
     quantity: 1000,
     price: 98.14,
@@ -25,6 +27,7 @@ export const bondsDataMap = {
     yieldChange: -0.4},
   'isin3': {
     isin: 'isin3',
+    img: 'vtb',
     standardName: 'ВТБ24 банк',
     quantity: 200,
     price: 102.75,
@@ -37,6 +40,7 @@ export const bondsDataMap = {
     yieldChange: 2.42},
   'isin4': {
     isin: 'isin4',
+    img: 'otkritie',
     standardName: 'Банк открытие',
     quantity: 100,
     price: 86.41,
@@ -49,6 +53,7 @@ export const bondsDataMap = {
     yieldChange: -3.24},
   'isin5': {
     isin: 'isin5',
+    img: 'sberbank',
     standardName: 'Сбербанк',
     quantity: 3000,
     price: 114.56,
@@ -60,6 +65,7 @@ export const bondsDataMap = {
     yieldChange: 0.62},
   'isin6': {
     isin: 'isin6',
+    img: 'vostochniy',
     standardName: 'Восточный банк',
     quantity: 500,
     price: 102.45,

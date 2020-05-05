@@ -62,3 +62,13 @@
     background-color: rgba(132, 158, 182, 0.1);
     cursor: pointer;
 }
+
+.costContainerItemLogo_wrapper {
+    display: flex;
+    vertical-align: baseline;
+    align-items: center;
+    text-align: center;
+}
+.costContainerItemLogo_wrapper img {
+    width: 100%;
+}
