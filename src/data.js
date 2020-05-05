@@ -67,6 +67,7 @@ export const bondsDataMap = {
     maturityDate: '07.12.2024',
     yield: 6.5,
     coupon: '2.04',
+    rating: 'BBB',
     yieldChange: 0.62},
   'isin6': {
     isin: 'isin6',
@@ -78,6 +79,7 @@ export const bondsDataMap = {
     currentInvestment: 185011.00,
     ccy: 'RUB',
     coupon: '0.54',
+    rating: 'BBB',
     maturityDate: '04.06.2021',
     yield: 10.8,
     yieldChange: 0.04}

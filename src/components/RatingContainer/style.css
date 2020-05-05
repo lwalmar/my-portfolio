@@ -1,0 +1,85 @@
+.ratingContainer {
+    padding-top: 243px;
+    height: calc(100% - 243px);
+}
+
+.ratingContainer_wrapper {
+    border-bottom: 1px solid #ccc;
+}
+
+.ratingContainer_title {
+    padding: 20px 40px 10px;
+    font-weight: bold;
+    background-color: rgb(247, 249, 251);
+    color: #849eb6;
+}
+
+.ratingContainerItem {
+    padding: 20px 0;
+}
+
+.ratingContainerItem_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.ratingContainerItem + .ratingContainerItem {
+    border-top: 1px solid #ebebeb;
+}
+
+.ratingContainerItem_info {
+    margin: auto;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.ratingContainerItemInfo_title,
+.ratingContainerItemInfo_values
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ratingContainerItemInfo_values div {
+    width: 100px;
+}
+
+.ratingContainerItemInfo_values div:last-child {
+    text-align: right;
+}
+
+
+.ratingContainerItemInfo_values {
+    color: rgb(132, 158, 182);
+    font-size: 14px;
+}
+
+.ratingContainerItem_increase,
+.ratingContainerItem_decrease {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.ratingContainerItem_decrease {
+    transform: scale(1, -1);
+    transform-origin: center center;
+}
+
+
+.ratingContainerItem:hover {
+    background-color: rgb(247, 249, 251);
+    cursor: pointer;
+}
+
+.ratingContainerItemLogo_wrapper {
+    display: flex;
+    vertical-align: baseline;
+    align-items: center;
+    text-align: center;
+}
+.ratingContainerItemLogo_wrapper img {
+    width: 100%;
+}
