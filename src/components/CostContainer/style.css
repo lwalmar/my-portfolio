@@ -1,5 +1,6 @@
 .costContainer {
     padding-top: 246px;
+    height: calc(100% - 246px);
 }
 
 .costContainerItem {
@@ -54,4 +55,10 @@
 .costContainerItem_decrease {
     transform: scale(1, -1);
     transform-origin: center center;
+}
+
+
+.costContainerItem:hover {
+    background-color: rgba(132, 158, 182, 0.1);
+    cursor: pointer;
 }

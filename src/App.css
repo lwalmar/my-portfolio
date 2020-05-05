@@ -12,3 +12,16 @@ html, body, div[id='root'] {
     justify-content: center;
     align-items: center;
 }
+
+.customModal {
+    border-radius: 10px;
+}
+
+.react-responsive-modal-modal {
+    border-radius: 10px;
+    width: 90%;
+}
+
+button.react-responsive-modal-closeButton {
+    display: none;
+}

@@ -6,6 +6,9 @@ import { ReactComponent as ArrowIncrease } from '../../icons/arrow-increase.svg'
 import './style.css';
 import {bondsDataMap} from './../../data';
 import classNames from 'classnames';
+import InstrumentInfo from './InstrumentInfo';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 
 const loadData = (isins) =>
   new Promise((resolve, error) => setTimeout(() => {
@@ -18,6 +21,7 @@ const CostContainer = ({
 }) => {
   const [bondsDataList, setBondsDataList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedIsin, setSelectedIsin] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -39,7 +43,7 @@ const CostContainer = ({
           {bondsDataList.map((bondData) => (
             <div
               className='costContainerItem'
-              onClick={() => null}
+              onClick={() => setSelectedIsin(bondData.isin)}
             >
               <div className='costContainerItem_wrapper'>
                 <div className='costContainerItem_logo'>
@@ -63,16 +67,25 @@ const CostContainer = ({
                         <ArrowIncrease />
                       </span>
                     }
-                      <span>{bondData.currentInvestmentsChangeInPercent}</span>
+                      <span>
+                        {bondData.currentInvestmentsChangeInPercent > 0 && '+'}
+                        {bondData.currentInvestmentsChangeInPercent}
+                      </span>
                     </div>
                     <div>{
                       bondData.currentInvestmentsChangeInPercent >= 0 && '+'
                     }
-                      <span>{(bondData.currentInvestmentsChangeInPercent * bondData.currentInvestment / 100).toFixed(2)}</span></div>
+                      <span>{(bondData.currentInvestmentsChangeInPercent * bondData.currentInvestment / 100).toFixed(2)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>))};
+            <Modal open={Boolean(selectedIsin)} onClose={() => setSelectedIsin(null)} center>
+              <InstrumentInfo
+                data={bondsDataMap[selectedIsin]}
+              />
+            </Modal>
         </div>
       )}
     </div>

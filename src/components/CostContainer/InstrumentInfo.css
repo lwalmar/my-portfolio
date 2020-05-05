@@ -1,0 +1,40 @@
+.instrumentInfo_header {
+    margin: 0 auto;
+    display: flex;
+}
+
+.instrumentInfo + .instrumentInfo {
+    border-top: 1px solid #ebebeb;
+}
+
+.instrumentInfo_info {
+    margin: auto;
+    margin-left: 15px;
+    width: 100%;
+}
+
+.instrumentInfo_title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.instrumentInfoTitle_rating {
+    color: rgb(132, 158, 182);
+}
+
+.instrumentInfo_list {
+    margin-left: 65px;
+    font-size: 14px;
+}
+
+.instrumentInfoItem_title {
+    color: rgb(132, 158, 182);
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.instrumentInfo_item {
+    display: flex;
+    justify-content: space-between;
+}
