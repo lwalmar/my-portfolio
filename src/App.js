@@ -4,13 +4,13 @@ import Header from './components/Header';
 import CostContainer from './components/CostContainer';
 import LoadingSpinner from './components/Common/LoadingSpinner';
 
-const loadData = () => new Promise((resolve, error) => setTimeout(() => resolve(['isin1', 'isin2', 'isin3', 'isin1', 'isin2', 'isin3', 'isin1', 'isin2', 'isin3']), 500))
+const loadData = () => new Promise((resolve, error) => setTimeout(() => resolve(['isin1', 'isin2', 'isin3', 'isin4', 'isin5', 'isin6']), 500))
 
 const VIEW_AVAILABLE = [
   'cost',
   'yield',
   'rating',
-  'payment'
+  'payments'
 ];
 
 function App() {
@@ -40,8 +40,10 @@ function App() {
             viewAvailable={VIEW_AVAILABLE}
             onChangeView={(view) => setView(view)}
           />
-          {
-            view === 'cost' && <CostContainer isins={isins} />}
+          {view === 'cost' && <CostContainer isins={isins} />}
+          {view === 'yield' && <CostContainer isins={isins} />}
+          {view === 'rating' && <CostContainer isins={isins} />}
+          {view === 'payments' && <CostContainer isins={isins} />}
         </Fragment>
       )}
     </div>

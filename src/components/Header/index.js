@@ -11,7 +11,7 @@ const VIEW_LABEL = {
   'cost': 'Стоимость',
   'yield': 'Доходноть',
   'rating': 'Рейтинг',
-  'payment': 'Выплаты'
+  'payments': 'Выплаты'
 };
 
 const Header = ({

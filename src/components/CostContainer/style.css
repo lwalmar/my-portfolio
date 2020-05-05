@@ -30,7 +30,28 @@
     width: 100%;
 }
 
+.costContainerItemInfo_values div {
+    width: 100px;
+}
+
+.costContainerItemInfo_values div:last-child {
+    text-align: right;
+}
+
+
 .costContainerItemInfo_values {
     color: rgb(132, 158, 182);
     font-size: 14px;
+}
+
+.costContainerItem_increase,
+.costContainerItem_decrease {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.costContainerItem_decrease {
+    transform: scale(1, -1);
+    transform-origin: center center;
 }

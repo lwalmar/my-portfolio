@@ -1,40 +1,80 @@
-import React, {Component} from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import ButtonSquare from '../Common/ButtonSquare';
 import ButtonCircle from '../Common/ButtonCircle';
+import LoadingSpinner from './../Common/LoadingSpinner';
+import { ReactComponent as ArrowIncrease } from '../../icons/arrow-increase.svg';
 import './style.css';
+import {bondsDataMap} from './../../data';
 import classNames from 'classnames';
+
+const loadData = (isins) =>
+  new Promise((resolve, error) => setTimeout(() => {
+    const result = isins.map((isin) => bondsDataMap[isin]);
+    resolve(result)
+    }, 800));
 
 const CostContainer = ({
   isins
 }) => {
+  const [bondsDataList, setBondsDataList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const result = await loadData(isins);
+      setBondsDataList(result);
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [isins]);
+
   return (
     <div className="costContainer">
-      <div className="costContainer_wrapper">
-        {isins.map((isin) => (
-          <div
-            className='costContainerItem'
-            onClick={() => null}
-          >
-            <div className='costContainerItem_wrapper'>
-              <div className='costContainerItem_logo'>
-                <ButtonCircle
-                  diameter={'45px'}
-                />
-              </div>
-              <div className='costContainerItem_info'>
-                <div className='costContainerItemInfo_title'>
-                  <div>{'Альфа Банк'}</div>
-                  <div>{'101,58 %'}</div>
+      {isLoading ? (
+        <div className="myPortfolio_loading">
+          <LoadingSpinner />
+        </div>
+      ) : (
+        <div className="costContainer_wrapper">
+          {bondsDataList.map((bondData) => (
+            <div
+              className='costContainerItem'
+              onClick={() => null}
+            >
+              <div className='costContainerItem_wrapper'>
+                <div className='costContainerItem_logo'>
+                  <ButtonCircle
+                    diameter={'45px'}
+                  />
                 </div>
-                <div className='costContainerItemInfo_values'>
-                  <div>{'02.02.2022'}</div>
-                  <div>{'10833,35 ₽'}</div>
-                  <div>{'12,42 %'}</div>
+                <div className='costContainerItem_info'>
+                  <div className='costContainerItemInfo_title'>
+                    <div>{bondData.standardName}</div>
+                    <div>{`${bondData.currentInvestment} ${bondData.ccy}`}</div>
+                  </div>
+                  <div className='costContainerItemInfo_values'>
+                    <div>{`${bondData.quantity} шт.`}</div>
+                    <div>{
+                      bondData.currentInvestmentsChangeInPercent >= 0
+                      ? <span className='costContainerItem_increase'>
+                        <ArrowIncrease />
+                      </span>
+                      : <span className='costContainerItem_decrease'>
+                        <ArrowIncrease />
+                      </span>
+                    }
+                      <span>{bondData.currentInvestmentsChangeInPercent}</span>
+                    </div>
+                    <div>{
+                      bondData.currentInvestmentsChangeInPercent >= 0 && '+'
+                    }
+                      <span>{(bondData.currentInvestmentsChangeInPercent * bondData.currentInvestment / 100).toFixed(2)}</span></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>))};
-      </div>
+            </div>))};
+        </div>
+      )}
     </div>
 )};
 
